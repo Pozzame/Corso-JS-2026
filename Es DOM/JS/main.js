@@ -15,7 +15,6 @@ function aumenta(sel) {
     let num = sel.innerText;
     num++;
     sel.innerText = num
-
 }
 
 const statLetti = document.getElementById('stat-letti');

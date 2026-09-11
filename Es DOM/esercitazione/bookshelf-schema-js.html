@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schema Architettura e Flusso - BookShelf</title>
+  <style>
+    :root {
+      --bg-color: #f4f6f8;
+      --card-bg: #ffffff;
+      --text-color: #2c3e50;
+      --primary: #3498db;
+      --primary-dark: #2980b9;
+      --accent: #2ecc71;
+      --border: #e2e8f0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 30px;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: var(--text-color);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Tab Controller */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .tab-btn {
+      padding: 12px 24px;
+      border: none;
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .tab-btn:hover {
+      background-color: #e3e8ee;
+    }
+
+    .tab-btn.active {
+      background-color: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+    }
+
+    /* Content Panels */
+    .tab-content {
+      display: none;
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background-color: #f8fafc;
+      color: #475569;
+      font-weight: 600;
+    }
+
+    /* Interactive Flow Interactive Elements */
+    .step-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .step-item {
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--primary);
+      margin-bottom: 12px;
+      border-radius: 0 8px 8px 0;
+      background-color: #f8fafc;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .step-item:hover {
+      background-color: #f1f5f9;
+    }
+
+    .step-title {
+      font-weight: bold;
+      color: var(--primary-dark);
+    }
+
+    /* Diagram Canvas */
+    pre {
+      background: #1e293b;
+      color: #f8fafc;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.85em;
+      font-weight: bold;
+      color: white;
+    }
+
+    .badge-main { background-color: #e74c3c; }
+    .badge-api { background-color: #e67e22; }
+    .badge-lib { background-color: #2980b9; }
+    .badge-ui { background-color: #2ecc71; }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      <h1>BookShelf - Architettura Applicazione</h1>
+      <p>Esplora interattivamente l'architettura dei file e il flusso dei dati.</p>
+    </header>
+
+    <!-- Pulsanti di navigazione Schede -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="openTab(event, 'moduli')">Moduli & File</button>
+      <button class="tab-btn" onclick="openTab(event, 'flussi')">Flussi di Esecuzione</button>
+      <button class="tab-btn" onclick="openTab(event, 'diagramma')">Diagramma Interazioni</button>
+    </div>
+
+    <!-- Scheda 1: Moduli -->
+    <div id="moduli" class="tab-content active">
+      <h2>Moduli del Sistema</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>File JS</th>
+            <th>Ruolo Principale</th>
+            <th>Funzioni Contenute</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge badge-main">main.js</span></td>
+            <td>Punto d'ingresso, ascolto degli eventi del form di ricerca.</td>
+            <td><code>avviaRicerca()</code>, Event Listeners</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-api">api.js</span></td>
+            <td>Integrazione HTTP/Fetch verso Open Library API con AbortController.</td>
+            <td><code>cercaLibri()</code>, <code>normalizzaLibro()</code></td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-lib">libreria.js</span></td>
+            <td>Stato della libreria utente, operatività su filtri e LocalStorage.</td>
+            <td><code>Libro()</code>, <code>Libreria()</code> (metodi prototipo)</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-ui">ui.js</span></td>
+            <td>Creazione sicura di elementi DOM e aggiornamento interfaccia.</td>
+            <td><code>creaCard()</code>, <code>mostraRisultati()</code>, <code>aggiornaSezioni()</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Scheda 2: Flussi -->
+    <div id="flussi" class="tab-content">
+      <h2>Sequenza Operazioni (Clicca sui passaggi per evidenziarli)</h2>
+      <h3>Flusso A: Ricerca Libro</h3>
+      <ul class="step-list">
+        <li class="step-item" onclick="toggleHighlight(this)">
+          <div class="step-title">1. Invio Form</div>
+          L'utente preme invio nel form. Event Listener in <code>main.js</code> chiama <code>avviaRicerca()</code>.
+        </li>
+        <li class="step-item" onclick="toggleHighlight(this)">
+          <div class="step-title">2. Fetch & Abort (api.js)</div>
+          <code>cercaLibri()</code> annulla eventuali richieste in corso e invia la nuova <code>fetch()</code>.
+        </li>
+        <li class="step-item" onclick="toggleHighlight(this)">
+          <div class="step-title">3. Normalizzazione & DOM (ui.js)</div>
+          I dati vengono normalizzati e passati a <code>mostraRisultati()</code> per generare la griglia HTML tramite <code>creaCard()</code>.
+        </li>
+      </ul>
+
+      <h3>Flusso B: Aggiunta Libro</h3>
+      <ul class="step-list">
+        <li class="step-item" onclick="toggleHighlight(this)">
+          <div class="step-title">1. Click su "+ Aggiungi"</div>
+          L'evento sulla card attiva <code>libreria.aggiungi()</code> in <code>libreria.js</code>.
+        </li>
+        <li class="step-item" onclick="toggleHighlight(this)">
+          <div class="step-title">2. Salvataggio & Sync UI</div>
+          Il libro viene registrato, salvato nel LocalStorage e ridisegnato con <code>aggiornaUI()</code>.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Scheda 3: Diagramma -->
+    <div id="diagramma" class="tab-content">
+      <h2>Diagramma Strutturale</h2>
+      <pre>
++-----------------------------------------------------------------------+
+|                              index.html                               |
++-----------------------------------------------------------------------+
+        |                                                 ^
+        | Evento Submit / Click                           | Inserimento DOM
+        v                                                 |
++-----------------------+                         +---------------------+
+|        main.js        |------------------------>|        ui.js        |
+|  - avviaRicerca()     |  mostraRisultati()      |  - creaCard()       |
++-----------------------+                         |  - aggiornaSezioni()|
+        |                                         +---------------------+
+        | cercaLibri()                                    ^        |
+        v                                                 |        |
++-----------------------+                                 |        |
+|        api.js         |                                 |        |
+|  - cercaLibri()       |                                 |        |
+|  - normalizzaLibro()  |                                 |        |
++-----------------------+                                 |        |
+                                                          |        |
+                                      aggiornaStatistiche()|        | libreria.aggiungi()
+                                      aggiornaSezioni()    |        | libreria.cambiaStato()
+                                                          |        v
+                                                +-----------------------+
+                                                |      libreria.js      |
+                                                |  - libreria (istanza) |
+                                                |  - salvaESincronizza()|
+                                                +-----------------------+
+                                                            |
+                                                            v
+                                                   [ localStorage ]
+      </pre>
+    </div>
+  </div>
+
+  <script>
+    // Gestione cambio schede
+    function openTab(evt, tabName) {
+      const tabContents = document.getElementsByClassName("tab-content");
+      for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove("active");
+      }
+
+      const tabBtns = document.getElementsByClassName("tab-btn");
+      for (let i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].classList.remove("active");
+      }
+
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+
+    // Effetto interattivo sui passaggi dei flussi
+    function toggleHighlight(element) {
+      element.style.borderColor = element.style.borderColor === 'var(--accent)' ? 'var(--primary)' : 'var(--accent)';
+      element.style.backgroundColor = element.style.backgroundColor === 'rgb(236, 253, 245)' ? '#f8fafc' : '#ecfdf5';
+    }
+  </script>
+</body>
+
+</html>
