@@ -13,18 +13,16 @@ function creaCard(datiLibro) {
 
   // Copertina
   const containerCopertina = document.createElement('div');
+  const img = document.createElement('img');
   if (datiLibro.copertina) {
-    const img = document.createElement('img');
     img.src = datiLibro.copertina;
     img.alt = `Copertina di ${datiLibro.titolo}`;
-    containerCopertina.appendChild(img);
   } else {
     containerCopertina.className = 'libro-copertina-placeholder';
-    const img = document.createElement('img');
     img.src = 'MEDIA/libro.svg';
     img.alt = 'Copertina non disponibile';
-    containerCopertina.appendChild(img);
   }
+  containerCopertina.appendChild(img);
 
   // Dettagli Info
   const info = document.createElement('div');
