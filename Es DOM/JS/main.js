@@ -16,7 +16,7 @@ function aumenta(sel) {
     num++;
     sel.innerText = num
 
- }
+}
 
 const statLetti = document.getElementById('stat-letti');
 const diminuisciLettiButton = document.getElementById('diminuisci-letti');
