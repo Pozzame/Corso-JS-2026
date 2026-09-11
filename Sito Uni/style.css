@@ -1,0 +1,98 @@
+:root {
+    --blue-scuro: #002554;
+    --blue-chiaro: #003C71;
+    --grigio: #DDE5ED;
+    --font-serif: "Libre Caslon Text", serif;
+    --font-sans-serif: "Roboto", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    font-family: var(--font-sans-serif);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bar-menu {
+    background-color: var(--blue-scuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+    width: 100%;
+}
+
+.bars {
+    list-style: none;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    padding: 0;
+}
+
+.bars a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.navbar {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 80px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pulsanti {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10px;
+}
+
+.btn-scopri {
+    background-color: white;
+    color: var(--blue-chiaro);
+    border: var(--grigio) 3px solid;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-iscriviti {
+    background-color: var(--blue-chiaro);
+    color: white;
+    border: var(--blue-chiaro) 3px solid;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}

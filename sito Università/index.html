@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University</title>
+
+    <link rel="stylesheet" href="./asset/CSS/normalize.css">
+    <link rel="stylesheet" href="./asset/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--HEADER-->
+    <header class="header">
+        <section class="bar-menu">
+            <ul class="bars">
+                <li><a href="#">Futuri Studenti</a></li>
+                <li><a href="#">Studenti</a></li>
+                <li><a href="#">Laureati</a></li>
+                <li><a href="#">Imprese</a></li>
+                <li><a href="#">Personale</a></li>
+            </ul>
+            <ul class="bars">
+                <li><a href="#">News</a></li>
+                <li><a href="#">Eventi</a></li>
+                <li><a href="#">Biblioteca</a></li>
+                <li><a href="#">Contatti</a></li>
+                <li><a href="#">IT ⌄</a></li>
+                <li><a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="24px"
+                            fill="white">
+                            <path
+                                d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                        </svg>
+                    </a>
+        </section>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./asset/img/logo.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Ateneo ⌄</a></li>
+                <li><a href="#">Corsi di laurea ⌄</a></li>
+                <li><a href="#">Ricerca ⌄</a></li>
+                <li><a href="#">Internazionalizzazione ⌄</a></li>
+                <li><a href="#">Servizi ⌄</a></li>
+            </ul>
+            <ul class="pulsanti">
+                <li><button class="btn-scopri"> SCOPRI L'ATENEO</button></li>
+                <li><button class="btn-iscriviti">ISCRIVITI</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+    <!--MAIN-->
+    <main>
+        <!--SEZIONE 1 HERO-->
+        <section id="hero" style="background: url(./asset/img/ateneo.png) no-repeat center center / cover">
+            <div>
+            <div>
+                <h3><span>conoscenza, innovazione, futuro</span></h3>
+                <h1>Costruiamo insieme<span class="aCapo"> il tuo domani</span></h1>
+                <h2>
+                Formazione di qualita, ricerca d'eccellenza
+                <span class="aCapo">e opportunita senza confini</span>
+                </h2>
+                <!-- hero btn -->
+                <div class="btn">
+                <a href="">scopri i corsi</a>
+                <a href="">iscriviti</a>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!--CONTENUTI DEL MAIN DOPO L'HERO-->
+        <div class="contenuti">
+            <!--SEZIONE 2-->
+            <section id="section-1">
+                <div class="corsi">
+                <div class="sup">
+                    <h3 class="libre-caslon-text-regular">
+                    Corsi di laurea in evidenza
+                    </h3>
+                    <a class="libre-caslon-text-regular" href="#"
+                    >TUTTI I CORSI<i class="fa-solid fa-arrow-right"></i
+                    ></a>
+                </div>
+                <div class="card-container">
+                    <!-- CARD 1 -->
+                    <article class="card">
+                    <img
+                        class="card-image"
+                        src="asset/img/Ingegneria informatica.jpg"
+                        alt="ingegneria informatica"
+                    />
+                    <p class="icon-container">
+                        <i class="icon fa-solid fa-laptop-code"></i>
+                    </p>
+                    <h2 class="product libre-caslon-text-regular">
+                        Ingegneria Informatica
+                    </h2>
+                    <p class="description libre-caslon-text-regular">
+                        Tecnologie digitali e innovazione per il futuro
+                    </p>
+                    <div class="btn-container">
+                        <a href="#" class="libre-caslon-text-regular">SCOPRI DI PIÙ</a>
+                    </div>
+                    </article>
+                    <!-- CARD 2 -->
+                    <article class="card">
+                    <img
+                        class="card-image"
+                        src="asset/img/economia-management.jpg"
+                        alt="Economia e management"
+                    />
+                    <p class="icon-container">
+                        <i class="icon fa-solid fa-money-bill-trend-up"></i>
+                    </p>
+                    <h2 class="product libre-caslon-text-regular">
+                        Economia e management
+                    </h2>
+                    <p class="description libre-caslon-text-regular">
+                        Competenze per guidare il cambiamento
+                    </p>
+                    <div class="btn-container">
+                        <a href="#" class="libre-caslon-text-regular">SCOPRI DI PIÙ</a>
+                    </div>
+                    </article>
+                    <!-- CARD 3 -->
+                    <article class="card">
+                    <img
+                        class="card-image"
+                        src="asset/img/scienze-biologiche.jpeg"
+                        alt="Scienze biologiche"
+                    />
+                    <p class="icon-container">
+                        <i class="icon fa-solid fa-microscope"></i>
+                    </p>
+                    <h2 class="product libre-caslon-text-regular">
+                        Scienze biologiche
+                    </h2>
+                    <p class="description libre-caslon-text-regular">
+                        Ricerca e sostenibilità per la vita
+                    </p>
+                    <div class="btn-container">
+                        <a href="#" class="libre-caslon-text-regular">SCOPRI DI PIÙ</a>
+                    </div>
+                    </article>
+                    <!-- CARD 4 -->
+                    <article class="card">
+                        <img
+                            class="card-image"
+                            src="asset/img/lettere-filosofia.jpg"
+                            alt="Lettere e filosofia"
+                        />
+                        <p class="icon-container">
+                            <i class="icon fa-solid fa-book-bookmark"></i>
+                        </p>
+                        <h2 class="product libre-caslon-text-regular">
+                            Lettere e filosofia
+                        </h2>
+                        <p class="description libre-caslon-text-regular">
+                            Cultura, pensiero critico e comunicazione
+                        </p>
+                        <div class="btn-container">
+                            <a href="#" class="libre-caslon-text-regular">SCOPRI DI PIÙ</a>
+                        </div>
+                    </article>
+                    </div>
+                </div>
+                <aside class="instruction">
+                    <div class="sup">
+                        <h3 class="libre-caslon-text-regular">Come iscriversi</h3>
+                    </div>
+                    <div class="steps">
+                        <div class="step-container">
+                        <div class="number">
+                            <p>1</p>
+                        </div>
+                        <div class="step">
+                            <h3 class="libre-caslon-text-regular">Scegli il tuo corso</h3>
+                            <p class="libre-caslon-text-regular">
+                            Esplora l'offerta formativa e trova il percorso giusto per te.
+                            </p>
+                        </div>
+                        </div>
+                        <div class="step-container">
+                        <div class="number">
+                            <p>2</p>
+                        </div>
+                        <div class="step">
+                            <h3 class="libre-caslon-text-regular">Verifica i requisiti</h3>
+                            <p class="libre-caslon-text-regular">
+                            Controlla i requisiti di accesso e prepara la documentazione.
+                            </p>
+                        </div>
+                        </div>
+                        <div class="step-container">
+                        <div class="number">
+                            <p>3</p>
+                        </div>
+                        <div class="step">
+                            <h3 class="libre-caslon-text-regular">Presenta la domanda</h3>
+                            <p class="libre-caslon-text-regular">
+                            Compila la domanda di ammissione online nei tempi previsti.
+                            </p>
+                        </div>
+                        </div>
+                        <div class="step-container">
+                        <div class="number">
+                            <p>4</p>
+                        </div>
+                        <div class="step">
+                            <h3 class="libre-caslon-text-regular">Immatricolati</h3>
+                            <p class="libre-caslon-text-regular">
+                            Completa l'immatricolazione e inizia la tua esperienza
+                            </p>
+                        </div>
+                        </div>
+                        <a href="#" class="libre-caslon-text-regular"
+                        >SCOPRI LA GUIDA COMPLETA<i class="fa-solid fa-arrow-right"></i
+                        ></a>
+                    </div>
+                </aside>
+            </section>
+
+            <!--SEZIONE 3-->
+            <section class="section3">
+
+                <!--ARTICOLI-->
+
+                <div class="divNews">
+                    <div class="intestazioneNews">
+                        <h2>News ed eventi</h2>
+                        <a href="">tutte le news <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="articoli">
+                        <article>
+                            <img src="./asset/img/assemblea.png" alt="Giornata della Ricerca 2025">
+                            <div class="testoArticolo">
+                                <time datetime="2025-05-20">20 MAG 2025</time>
+                                <h3>Giornata della Ricerca 2025</h3>
+                                <p>Incontri, talk e laboratori per scoprire la ricerca che cambia il mondo.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src="./asset/img/bandiere.png" alt="Nuovo accordo internazionale 2025">
+                            <div class="testoArticolo">
+                                <time datetime="2025-05-14">14 MAG 2025</time>
+                                <h3>Nuovo accordo internazionale</h3>
+                                <p>Siglata una collaborazione con Seoul National University.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src="./asset/img/colleghi.png" alt="Carrer Day 2025">
+                            <div class="testoArticolo">
+                                <time datetime="2025-05-08">08 mag 2025</time>
+                                <h3>Carrer Day 2025</h3>
+                                <p>Incontra le aziende e costruisci il tuo futuro professionale.</p>
+                            </div>
+                        </article>
+
+                    <p class="link"><a href="">tutti gli eventi <i class="fa-solid fa-arrow-right"></i></a></p> 
+
+                    </div>
+
+                </div>
+                <!--SERVIZI-->
+                <div class="sezServizi">
+                    <h2>Servizi per studenti</h2>
+                    <div class="contServizi">
+                        
+                        <div class="divServizi">
+
+                            <div class="servizi servizi1">
+
+                                <div class="servizio">
+                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                                    </svg>
+
+                                    <div>
+                                        <h3>Orientamento</h3>
+                                        <p>supporto nella scelta dei percorsi di studi.</p>
+                                    </div>
+                                </div>
+
+                                <div class="servizio">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                        <line x1="9" y1="6" x2="17" y2="6"/>
+                                        <line x1="9" y1="10" x2="17" y2="10"/>
+                                        <line x1="9" y1="14" x2="14" y2="14"/>
+                                    </svg>
+
+                                    <div>
+                                        <h3>Biblioteca</h3>
+                                        <p>Risorse, spazi di studio e servizi online.</p>
+                                    </div>
+                                </div>
+
+                                <div class="servizio">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                                    </svg>
+
+                                    <div>
+                                        <h3>Placement</h3>
+                                        <p>Stage, tirocini e offerte di lavoro.</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="servizi">
+
+                                <div class="servizio">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3L2 8l10 5 10-5-10-5z"/>
+                                        <path d="M2 8v8l10 5 10-5V8"/>
+                                        <polygon points="12 19 12 14"/>
+                                        <line x1="12" y1="14" x2="12" y2="19"/>
+                                    </svg>
+
+                                    <div>
+                                        <h3>Diritto allo studio</h3>
+                                        <p>Borse di studio,agevolazioni e alloggi.</p>
+                                    </div>
+                                </div>
+
+                                <div class="servizio">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <line x1="2" y1="12" x2="22" y2="12"/>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                    </svg>
+                                    <div>
+                                        <h3>Mobilità internazionale</h3>
+                                        <p>Programmi e opportunità all'estero.</p>
+                                    </div>
+                                </div>
+
+                                <div class="servizio">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                    </svg>
+
+                                    <div>
+                                        <h3>Supporto e benessere</h3>
+                                        <p>Servizi di ascolto,salute e inclusione.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <p class="link"><a href="">tutti i servizi <i class="fa-solid fa-arrow-right"></i></a></p>
+
+                    </div>
+                </div>
+
+                <!--NUMERI CHE CONTANO-->
+
+
+                <div class="sezNumeri">
+
+                    <h2>Numeri che contano</h2>
+
+                    <div class="contNumeri">
+
+                        <div class="divNumeri">
+
+                            <div class="datiNumeri">
+
+                                <div class="datoNumeri">
+                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="8" cy="8" r="3"/>
+                                        <path d="M3 16c0-2.2 1.8-4 4-4h2c2.2 0 4 1.8 4 4v2H3v-2z"/>
+                                        <circle cx="18" cy="10" r="2"/>
+                                        <path d="M14 18c0-1.7 1.3-3 3-3h2c1.7 0 3 1.3 3 3v2h-8v-2z"/>
+                                    </svg>
+
+                                    <div>
+                                        <p class="risultato">15.800+</p>
+                                        <p class="ambito">Studenti iscritti</p>
+                                    </div>
+                                </div>
+
+                                <div class="datoNumeri">
+                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="11" cy="11" r="7"/>
+                                        <line x1="16" y1="16" x2="22" y2="22"/>
+                                        <line x1="8" y1="11" x2="14" y2="11"/>
+                                        <line x1="11" y1="8" x2="11" y2="14"/>
+                                    </svg>
+
+                                    <div>
+                                        <p class="risultato">620+</p>
+                                        <p class="ambito">Docenti e ricercatori</p>
+                                    </div>
+                                </div>
+
+                                <div class="datoNumeri">
+                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                                        <polyline points="23 6 17 6 23 6"/>
+                                
+                                    </svg>
+                                    <div>
+                                        <p class="risultato">85%</p>
+                                        <p class="ambito">Tasso di occupazione dei laureati</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        
+
+                            <div class="datiNumeri">
+                                <div class="datoNumeri">
+                                
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                    </svg>
+
+                                    <div>
+                                        <p class="risultato">98</p>
+                                        <p class="ambito">Corsi di laurea</p>
+                                    </div>
+                                </div>
+
+                                <div class="datoNumeri">
+                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 12h-4l-3 3h-2l-3-3H4"/>
+                                        <path d="M4 12v-2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2"/>
+                                        <path d="M4 12v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/>
+                                        <path d="M8 16v-2"/>
+                                        <path d="M16 16v-2"/>
+                                    </svg>
+
+                                    <div>
+                                        <p class="risultato">120+</p>
+                                        <p class="ambito">Accordi internazionali</p>
+                                    </div>
+                                </div>
+
+                                <div class="datoNumeri">
+                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="15" rx="1"/>
+                                        <path d="M7 7V2h10v5"/>
+                                        <line x1="7" y1="11" x2="17" y2="11"/>
+                                        <line x1="7" y1="15" x2="17" y2="15"/>
+                                        <line x1="7" y1="19" x2="17" y2="19"/>
+                                    </svg>
+
+                                    <div>
+                                        <p class="risultato">16</p>
+                                        <p class="ambito">Dipartimenti e Scuole</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+
+                        <p class="link"><a href=""></a>segnaposto</p>
+
+                    </div>
+
+
+                </div>
+            
+            </section>
+        </div>
+
+        <!--SEZIONE 4-->
+        <section class="students">
+
+                <header class="head_stud">
+
+                    <div>
+                        <h2 class="title_head">Le parole dei nostri studenti</h2>
+                    </div>
+
+                    <div class="test">
+
+
+                        <div class="all_test">
+
+                            <p class="">Tutte le testimonianze</p>
+
+                            <i class="fa-solid fa-arrow-right-long"></i>
+
+
+                        </div>
+
+
+                        <div>
+                            <button class="but_test">
+                                <i class="fa-solid fa-chevron-left"></i>
+
+                            </button>
+
+                            <button class="but_test">
+                                <i class="fa-solid fa-chevron-right"></i>
+
+                            </button>
+                        </div>
+                    </div>
+
+
+                </header>
+
+
+                <div class="feedback">
+
+                    <article class="card_stud">
+
+                        <div>
+                            <img src="./asset/img/giulia.jpg" alt="giulia r." class="img_stud">
+                        </div>
+
+                        <div class="quote_stud">
+                            <p class="text_stud">"Un Ateneo che ti stimola ogni giorno a dare il meglio e a crescere, dentro e
+                                fuori dall'aula."
+                            </p>
+
+                            <p class="name_stud">Giulia R.</p>
+                            <p class="type_stud">Studentessa di Ingegneria</p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="card_stud">
+
+                        <div>
+                            <img src="./asset/img/marco.jpg" alt="marco b." class="img_stud">
+                        </div>
+
+                        <div class="quote_stud">
+                            <p class="text_stud">"Grazie ai programmi internazionali ho potuto vivere un'esperienza che mi ha
+                                cambiato la vita."
+                            </p>
+
+                            <p class="name_stud">Marco B.</p>
+                            <p class="type_stud">Studente di Economia</p>
+                        </div>
+
+
+                    </article>
+
+                    <article class="card_stud">
+
+                        <div>
+                            <img src="./asset/img/martina.png" alt="martina l." class="img_stud">
+                        </div>
+
+                        <div class="quote_stud">
+                            <p class="text_stud">"Docenti competenti, servizi efficienti e tante opportunità per costruire il
+                                proprio futuro."
+                            </p>
+
+                            <p class="name_stud">Martina L.</p>
+                            <p class="type_stud">Studentessa di Lettere</p>
+                        </div>
+
+
+                    </article>
+
+
+                </div>
+
+        </section>
+            
+        
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <section id="f-section-1">
+
+        <div>
+
+            <div class="logoFooter">
+            <img src="./asset/img/iconafooter.png" alt="">
+            <h4>Universita <span class="aCapo">di nova</span></h4>
+            
+            </div>
+            <p class="margin-right">Lorem ipsum dolor sit amet <span class="aCapo
+            class="margin-right"">consectetur.</span></p>
+            <div class="icon margin-right">
+            <img src="./facebook.svg" alt="">
+            <img src="./instagram.svg" alt="">
+            <img src="./linkedin.svg" alt="">
+            <img src="./youtube.svg" alt="">
+
+            </div>
+        </div>
+        <div>
+            <h4>Ateneo</h4>
+
+            <ul class="listFooter">
+            <li><a href="">Chi siamo</a></li>
+            <li><a href="">Governance</a></li>
+            <li><a href="">Dipartimenti e scuole</a></li>
+            <li><a href="">Trasparenza</a></li>
+            <li><a href="">Lavora con noi</a></li>
+            </ul>
+        </div>
+        </div>
+        <div>
+            <h4>titolo</h4>
+
+            <ul class="listFooter">
+            <li><a href="">Item1</a></li>
+            <li><a href="">Itdddddddem2</a></li>
+            <li><a href="">Iteddddddddddddddm3</a></li>
+            <li><a href="">Item4</a></li>
+            </ul>
+        </div>
+        </div>
+        <div>
+            <h4>titolo</h4>
+
+            <ul class="listFooter">
+            <li><a href="">Itemddddddddd1</a></li>
+            <li><a href="">Item2</a></li>
+            <li><a href="">Item3</a></li>
+            <li><a href="">Item4</a></li>
+            </ul>
+        </div>
+        </div>
+        <div>
+            <h4>titolo</h4>
+            <address>
+                <p>
+                <span class="aCapo">Universita di Nova</span>
+                <span class="aCapo">Via dell'universita', 1</span>
+                <span class="aCapo">0010 Nova (NO)</span>
+                
+                </p>
+                
+                <p>
+                <a href="tel:+390612345678">+39 06 1234 5678</a>
+                <div class="aCapo">
+                    <a href="mailto:info@universitas.it">info@unidinova.it</a>
+                </div>
+                </p>
+            </address>      
+            </div>
+
+
+        
+        </section>
+        <!-- footer section 2  -->
+        <section id="f-section-2">
+            <div class="line"></div>
+            <div class="f-flex">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, eaque.</p>
+            <ul>
+                <li>Privacy</li>
+                <li>Coockie Policy</li>
+                <li>Note legali</li>
+                <li>Accessibilita</li>
+            </ul>
+            </div>
+        </section>
+    </footer>
+     
+</body>
+
+</html>

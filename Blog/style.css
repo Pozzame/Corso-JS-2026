@@ -1,0 +1,18 @@
+body { background-color: lightblue;}
+h1 { color: navy; font-family: Arial, sans-serif;}
+img { width: 500px; height: auto; }
+table { border-collapse: collapse; width: 50%; }
+th, td { border: 1px solid black; padding: 8px; text-align: center; }
+header, footer { background-color: lightgray; }
+
+.playwrite-br-guides-regular {
+  font-family: "Playwrite BR Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-family: "Playwrite BR Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

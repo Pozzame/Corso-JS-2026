@@ -1,0 +1,66 @@
+body {
+  /* background-color: lightblue; */
+  background: #78cdff;
+  background: linear-gradient(33deg, rgba(120, 205, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  margin: 10px;
+}
+
+h1 {
+  color: navy;
+  font-family: Arial;
+}
+
+p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.socialButton {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #e6edf3;
+  font-size: 14px;
+  transition: border-color0.2s, box-shadow0.2s;
+  text-decoration: none;
+}
+.socialButton:hover {
+  /* transform: translateY(-100px); */
+  border-color: #8b949e;
+  box-shadow: rgba(140, 149, 159, 0.2) 0px 0px 0px 1px inset;
+}
+
+img {
+  max-width: 250px;
+  border-radius: 50%;
+  object-fit: cover;  
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+header,
+footer {
+  background-color: lightgray;
+}
+
+/* .playwrite-br-guides-regular {
+  font-family: "Playwrite BR Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-family: "Playwrite BR Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+} */
