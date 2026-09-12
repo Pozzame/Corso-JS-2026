@@ -258,18 +258,6 @@ paket-files/
 # ABP Studio
 **/.abpstudio/
 
-# GestoreCommesse
-src/GestoreCommesse.Web/Logs/*
-src/GestoreCommesse.Web.Host/Logs/*
-src/GestoreCommesse.Web.Public/Logs/*
-src/GestoreCommesse.Web.Public.Host/Logs/*
-src/GestoreCommesse.AuthServer/Logs/*
-src/GestoreCommesse.HttpApi.Host/Logs/*
-src/GestoreCommesse.HttpApi.HostWithIds/Logs/*
-src/GestoreCommesse.DbMigrator/Logs/*
-src/GestoreCommesse.Blazor.Server/Logs/*
-src/GestoreCommesse.Blazor.Server.Tiered/Logs/*
-
 # Use abp install-libs to restore.
 **/wwwroot/libs/*
 
