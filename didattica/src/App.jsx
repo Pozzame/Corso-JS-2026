@@ -11,6 +11,7 @@ import UseRefBase from './giorno-2-hooks-rendering/UseRefBase.jsx';
 import RenderingCondizionaleEsercizio from './giorno-2-hooks-rendering/RenderingCondizionaleEsercizio.jsx';
 import RenderingListeEsercizio from './giorno-2-hooks-rendering/RenderingListeEsercizio.jsx';
 import UseEffectEsercizio from './giorno-2-hooks-rendering/UseEffectEsercizio.jsx';
+import UseMemoCallbackEsercizio from './giorno-2-hooks-rendering/UseMemoCallbackEsercizio.jsx';
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       {/* <UseEffectBase /> */}
       {/* <RenderingCondizionaleEsercizio /> */}
       {/* <RenderingListeEsercizio /> */}
-      <UseEffectEsercizio />
+      {/* <UseEffectEsercizio /> */}
+      <UseMemoCallbackEsercizio />
       <Footer />
     </>
   );
