@@ -1,0 +1,41 @@
+@import "./variabili.css";
+
+.pagina {
+  font-family: var(--font-principale);
+  border: 1px solid var(--colore-bordo);
+  border-radius: var(--raggio);
+  overflow: hidden;
+  max-width: 420px;
+}
+
+.pagina__header {
+  background: var(--colore-primario-scuro);
+  color: white;
+  padding: var(--spaziatura-md);
+}
+
+.pagina__header h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.pagina__main {
+  padding: var(--spaziatura-md);
+  background: var(--colore-superficie);
+}
+
+.pagina__benvenuto {
+  color: var(--colore-primario);
+  margin-top: 0;
+}
+
+.pagina__footer {
+  padding: var(--spaziatura-sm) var(--spaziatura-md);
+  background: var(--colore-sfondo);
+  color: var(--colore-testo-secondario);
+  font-size: 13px;
+}
+
+.pagina__footer p {
+  margin: 0;
+}

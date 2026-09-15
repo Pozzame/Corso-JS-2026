@@ -1,0 +1,10 @@
+@import './variabili.css';
+
+.esercizio-componenti {
+  padding: var(--spaziatura-lg);
+  background: var(--colore-sfondo);
+  border: 2px dashed var(--colore-bordo);
+  border-radius: var(--raggio);
+  font-family: var(--font-principale);
+  max-width: 420px;
+}

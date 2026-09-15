@@ -1,0 +1,28 @@
+Titolo: Vetrina corsi
+
+Obiettivo
+Costruire una pagina statica che mostra un elenco di corsi, usando componenti riutilizzabili con props e children
+
+Requisiti
+
+Un componente Layout che accetta children e mostra un'intestazione fissa (<header> con un titolo a piacere) sopra il contenuto e un piè di pagina fisso (<footer>) sotto.
+Un componente CorsoCard che riceve tramite props:
+titolo (obbligatorio)
+durata (obbligatorio, in ore)
+livello — con valore di default "Base" se non specificato
+e mostra questi dati in un blocco stilizzato (bordo, padding, radius — riusa variabili.css o creane uno nuovo).
+CorsoCard deve anche accettare children: il testo descrittivo del corso va passato come children, non come prop, per allenare la differenza tra i due meccanismi.
+Dentro Layout, usa CorsoCard almeno tre volte, con dati diversi:
+una volta specificando tutte e tre le props
+una volta senza specificare livello, per vedere il default in azione
+una volta con una descrizione (children) più lunga delle altre, per verificare che il layout regga contenuti di lunghezza diversa
+
+Vincoli
+
+Nessun useState, nessun onClick, nessun hook: fuori scope per il giorno 1.
+Ogni componente in PascalCase, un file .jsx a testa o tutti nello stesso file, a scelta.
+Almeno una regola JSX vista oggi deve comparire esplicitamente e correttamente: un Fragment o un <div> come radice, className (non class), un tag self-closing.
+CSS separato, non inline (salvo eventualmente un caso isolato, se vuoi far notare la differenza).
+
+Criterio di verifica
+L'esercizio è completo quando le tre card si vedono distintamente sulla pagina, il default di livello funziona (lo vedi comparire quando non lo passi), e il contenuto children cambia lunghezza senza rompere il layout.

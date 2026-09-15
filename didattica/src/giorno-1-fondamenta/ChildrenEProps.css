@@ -1,0 +1,49 @@
+@import "./variabili.css";
+
+.riquadri {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spaziatura-md);
+  font-family: var(--font-principale);
+  max-width: 380px;
+}
+
+.riquadro {
+  background: var(--colore-superficie);
+  border: 1px solid var(--colore-bordo);
+  border-radius: var(--raggio);
+  overflow: hidden;
+}
+
+.riquadro__titolo {
+  margin: 0;
+  padding: var(--spaziatura-sm) var(--spaziatura-md);
+  background: var(--colore-sfondo);
+  color: var(--colore-primario-scuro);
+  font-size: 15px;
+  border-bottom: 1px solid var(--colore-bordo);
+}
+
+.riquadro__corpo {
+  padding: var(--spaziatura-md);
+  color: var(--colore-testo);
+  font-size: 14px;
+}
+
+.riquadro__corpo p {
+  margin: 0 0 var(--spaziatura-sm) 0;
+}
+
+.riquadro__bottone {
+  padding: 8px 14px;
+  background: var(--colore-primario);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.riquadro__bottone:hover {
+  background: var(--colore-primario-scuro);
+}

@@ -1,0 +1,31 @@
+@import "./variabili.css";
+
+.props-sola-lettura {
+  padding: var(--spaziatura-lg);
+  background: var(--colore-superficie);
+  border: 1px solid var(--colore-bordo);
+  border-radius: var(--raggio);
+  font-family: var(--font-principale);
+  max-width: 380px;
+}
+
+.props-sola-lettura p {
+  margin-top: 0;
+  color: var(--colore-testo-secondario);
+  font-size: 14px;
+}
+
+.contatore-figlio {
+  padding: 10px 18px;
+  background: var(--colore-primario);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.contatore-figlio:hover {
+  background: var(--colore-primario-scuro);
+}

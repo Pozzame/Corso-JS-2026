@@ -1,0 +1,16 @@
+@import "./variabili.css";
+
+.contenitore {
+  padding: var(--spaziatura-lg);
+  background: var(--colore-superficie);
+  border: 1px solid var(--colore-bordo);
+  border-radius: var(--raggio);
+  font-family: var(--font-principale);
+  max-width: 380px;
+}
+
+.contenitore h1 {
+  margin-top: 0;
+  color: var(--colore-primario-scuro);
+  font-size: 20px;
+}

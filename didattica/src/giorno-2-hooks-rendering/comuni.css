@@ -1,0 +1,113 @@
+/* Classi riusate da tutte le demo di questa giornata:
+   box contenitore, bottoni, input, liste, badge di stato. */
+@import "./variabili.css";
+
+.box {
+  padding: var(--spaziatura-lg);
+  background: var(--colore-superficie);
+  border: 1px solid var(--colore-bordo);
+  border-radius: var(--raggio);
+  font-family: var(--font-principale);
+  max-width: 420px;
+}
+
+.box--tratteggiato {
+  border-style: dashed;
+  background: var(--colore-sfondo);
+}
+
+.box--errore {
+  border-color: var(--colore-errore);
+}
+
+.titolo {
+  margin-top: 0;
+  color: var(--colore-primario-scuro);
+}
+
+.sottotitolo {
+  color: var(--colore-testo-secondario);
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.bottone-riga {
+  display: flex;
+  gap: var(--spaziatura-sm);
+  flex-wrap: wrap;
+  margin-top: var(--spaziatura-sm);
+}
+
+.bottone {
+  padding: 8px 16px;
+  background: var(--colore-primario);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.bottone:hover {
+  background: var(--colore-primario-scuro);
+}
+
+.bottone--secondario {
+  background: var(--colore-sfondo);
+  color: var(--colore-testo);
+  border: 1px solid var(--colore-bordo);
+}
+
+.bottone--secondario:hover {
+  background: var(--colore-bordo);
+}
+
+.input {
+  padding: 8px 12px;
+  border: 1px solid var(--colore-bordo);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--colore-primario);
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: var(--spaziatura-sm) 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lista li {
+  padding: 8px 12px;
+  background: var(--colore-sfondo);
+  border-radius: 6px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.badge--successo {
+  background: #dcfce7;
+  color: var(--colore-successo);
+}
+
+.badge--errore {
+  background: #fee2e2;
+  color: var(--colore-errore);
+}

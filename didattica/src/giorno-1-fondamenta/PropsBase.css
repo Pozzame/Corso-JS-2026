@@ -1,0 +1,27 @@
+@import "./variabili.css";
+
+.lista-schede {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spaziatura-md);
+  font-family: var(--font-principale);
+  max-width: 340px;
+}
+
+.scheda {
+  padding: var(--spaziatura-md);
+  background: var(--colore-superficie);
+  border: 1px solid var(--colore-bordo);
+  border-radius: var(--raggio);
+}
+
+.scheda__nome {
+  margin: 0 0 4px 0;
+  color: var(--colore-primario-scuro);
+}
+
+.scheda__dettaglio {
+  margin: 2px 0;
+  color: var(--colore-testo-secondario);
+  font-size: 14px;
+}

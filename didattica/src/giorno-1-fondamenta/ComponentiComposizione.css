@@ -1,0 +1,28 @@
+@import './variabili.css';
+
+.lista-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spaziatura-md);
+  font-family: var(--font-principale);
+  max-width: 420px;
+}
+
+.card {
+  padding: var(--spaziatura-md);
+  background: var(--colore-superficie);
+  border: 1px solid var(--colore-bordo);
+  border-left: 4px solid var(--colore-primario);
+  border-radius: var(--raggio);
+}
+
+.card__titolo {
+  margin: 0 0 4px 0;
+  color: var(--colore-primario-scuro);
+}
+
+.card__descrizione {
+  margin: 0;
+  color: var(--colore-testo-secondario);
+  font-size: 14px;
+}
