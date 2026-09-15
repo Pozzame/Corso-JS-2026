@@ -18,7 +18,7 @@ function UseEffectBase() {
   return (
     <div className="box">
       <h2 className="titolo">Orologio</h2>
-      <p className="sottotitolo">{ora.toLocaleTimeString()}</p>
+      <p className="sottotitolo">{ora.toLocaleString()}</p>
     </div>
   );
 }

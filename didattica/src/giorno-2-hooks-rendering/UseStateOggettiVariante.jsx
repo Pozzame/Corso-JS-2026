@@ -6,7 +6,7 @@ import { useState } from "react";
 import "./comuni.css";
 
 function UseStateOggettiVariante() {
-  const [attivita, setAttivita] = useState(["Ripasso JSX", "Esercizi props"]);
+  const [attivita, setAttivita] = useState(["Ripasso JSX", "Esercizi props", "Cibo gatto"]);
   const [testo, setTesto] = useState("");
 
   function handleAggiungi() {
