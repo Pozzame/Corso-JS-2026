@@ -7,6 +7,7 @@ import UseStateBase from './giorno-2-hooks-rendering/UseEffectBase.jsx';
 import UseStateOggettiBase from './giorno-2-hooks-rendering/UseStateOggettiBase.jsx';
 import UseStateOggettiVariante from './giorno-2-hooks-rendering/UseStateOggettiVariante.jsx';
 import UseEffectBase from './giorno-2-hooks-rendering/UseEffectBase.jsx';
+import UseRefBase from './giorno-2-hooks-rendering/UseRefBase.jsx';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       {/* <UseStateOggettiBase /> */}
       {/* <UseStateOggettiVariante /> */}
       <UseEffectBase />
+      <UseRefBase />
       <Footer />
     </>
   );
