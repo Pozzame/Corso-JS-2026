@@ -12,6 +12,11 @@ import RenderingCondizionaleEsercizio from './giorno-2-hooks-rendering/Rendering
 import RenderingListeEsercizio from './giorno-2-hooks-rendering/RenderingListeEsercizio.jsx';
 import UseEffectEsercizio from './giorno-2-hooks-rendering/UseEffectEsercizio.jsx';
 import UseMemoCallbackEsercizio from './giorno-2-hooks-rendering/UseMemoCallbackEsercizio.jsx';
+import ContextApiEsercizio from './esercizi/ContextApiEsercizio.jsx';
+import EventiEsercizio from './esercizi/EventiEsercizio.jsx';
+import FormControllatoEsercizio from './esercizi/FormControllatoEsercizio.jsx';
+import LiftingStateEsercizio from './esercizi/LiftingStateEsercizio.jsx';
+import UseReducerEsercizio from './esercizi/UseReducerEsercizio.jsx';
 
 function App() {
   return (
@@ -27,7 +32,12 @@ function App() {
       {/* <RenderingCondizionaleEsercizio /> */}
       {/* <RenderingListeEsercizio /> */}
       {/* <UseEffectEsercizio /> */}
-      <UseMemoCallbackEsercizio />
+      {/* <UseMemoCallbackEsercizio /> */}
+      {/* <ContextApiEsercizio /> */}
+      {/* <EventiEsercizio /> */}
+      {/* <FormControllatoEsercizio /> */}
+      <LiftingStateEsercizio />
+      {/* <UseReducerEsercizio /> */}
       <Footer />
     </>
   );

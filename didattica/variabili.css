@@ -1,0 +1,19 @@
+/* Variabili condivise da tutti i CSS del giorno 1.
+   Un solo posto dove cambiare colori e spaziature per l'intera giornata. */
+
+:root {
+  --colore-primario: #2563eb;
+  --colore-primario-scuro: #1e3a5f;
+  --colore-sfondo: #f8fafc;
+  --colore-superficie: #ffffff;
+  --colore-testo: #1e293b;
+  --colore-testo-secondario: #64748b;
+  --colore-bordo: #e2e8f0;
+  --colore-errore: #dc2626;
+  --colore-successo: #16a34a;
+  --raggio: 10px;
+  --spaziatura-sm: 8px;
+  --spaziatura-md: 16px;
+  --spaziatura-lg: 24px;
+  --font-principale: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
