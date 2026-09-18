@@ -17,6 +17,11 @@ import EventiEsercizio from './esercizi/EventiEsercizio.jsx';
 import FormControllatoEsercizio from './esercizi/FormControllatoEsercizio.jsx';
 import LiftingStateEsercizio from './esercizi/LiftingStateEsercizio.jsx';
 import UseReducerEsercizio from './esercizi/UseReducerEsercizio.jsx';
+import FetchEsercizio from './esercizi/Giorno 4/FetchEsercizio.jsx';
+import PostEsercizio from './esercizi/Giorno 4/PostEsercizio.jsx';
+import RoutingEsercizio from './esercizi/Giorno 4/RoutingEsercizio.jsx';
+import UseFetchEsercizio from './esercizi/Giorno 4/UseFetchEsercizio.jsx';
+import RubricaContatti from './giorno-2-hooks-rendering/RubricaContatti.jsx';
 
 function App() {
   return (
@@ -36,8 +41,13 @@ function App() {
       {/* <ContextApiEsercizio /> */}
       {/* <EventiEsercizio /> */}
       {/* <FormControllatoEsercizio /> */}
-      <LiftingStateEsercizio />
+      {/* <LiftingStateEsercizio /> */}
       {/* <UseReducerEsercizio /> */}
+      {/* <FetchEsercizio /> */}
+      {/* <PostEsercizio /> */}
+      {/* <RoutingEsercizio /> */}
+      {/* <UseFetchEsercizio /> */}
+      <RubricaContatti />
       <Footer />
     </>
   );
