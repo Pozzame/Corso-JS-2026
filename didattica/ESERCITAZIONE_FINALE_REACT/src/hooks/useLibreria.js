@@ -30,7 +30,16 @@ export const STATI = {
 export function useLibreria() {
   const [libreria, setLibreria] = useState(() => {
     const salvato = localStorage.getItem(CHIAVE_STORAGE);
-    return salvato ? JSON.parse(salvato) : [];
+    if (!salvato) return [];
+    try {
+      const dati = JSON.parse(salvato);
+      // Se il contenuto salvato non è un array (dato corrotto o modificato a
+      // mano), ripartiamo da una libreria vuota invece di far crashare l'app.
+      return Array.isArray(dati) ? dati : [];
+    } catch (error) {
+      console.warn('Dati della libreria non validi in localStorage, riparto da una libreria vuota.', error);
+      return [];
+    }
   });
 
   useEffect(() => {
@@ -71,7 +80,7 @@ export function useLibreria() {
   const statistiche = {
     totale: libreria.length,
     letti: libreria.filter(libro => libro.stato === STATI.LETTO).length,
-    inLettura: libreria.filter(libro => libro.stato === STATI.IN_LETTURA).length,
+    inLettura: libreria.filter(libro => libro.stato === STATI.IN_LETTURA || libro.stato === STATI.QUASI_FINITO).length,
     daLeggere: libreria.filter(libro => libro.stato === STATI.DA_LEGGERE).length,
     quasiFinito: libreria.filter(libro => libro.stato === STATI.QUASI_FINITO).length
   };

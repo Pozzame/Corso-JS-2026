@@ -31,7 +31,7 @@ export default function Home() {
     setTimeout(() => setNotifica(null), 3000);
   }
 
-  const inLettura = libreria.filter(l => l.stato === STATI.IN_LETTURA);
+  const inLettura = libreria.filter(l => l.stato === STATI.IN_LETTURA || l.stato === STATI.QUASI_FINITO);
   const daLeggere = libreria.filter(l => l.stato === STATI.DA_LEGGERE);
   const letti = libreria.filter(l => l.stato === STATI.LETTO);
   const hero={
