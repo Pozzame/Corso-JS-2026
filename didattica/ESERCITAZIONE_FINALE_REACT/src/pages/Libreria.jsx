@@ -9,7 +9,7 @@
 
 import {useState} from 'react';
 import BookCardLibreria from '../components/BookCardLibreria';
-import StatCard from '../components/StatCard';
+import SezioneBookCardsStatistics from'../components/BookCardsStatistics';
 import {useLibreriaCtx} from '../context/LibreriaContext';
 import {STATI} from '../hooks/useLibreria';
 import SezioneHero from '../components/Hero';
@@ -27,7 +27,7 @@ const FILTRI = [
 ];
 
 export default function Libreria() {
-  const {libreria, statistiche, rimuoviLibro, cambiaStato} = useLibreriaCtx();
+  const {libreria, rimuoviLibro, cambiaStato} = useLibreriaCtx();
   const [filtroAttivo, setFiltroAttivo] = useState('tutti');
 
   const libreriafiltrata = filtroAttivo === 'tutti' ? libreria : libreria.filter(l => l.stato === filtroAttivo);
@@ -39,14 +39,7 @@ export default function Libreria() {
     <main>
       <SezioneHero hero={hero}/>
 
-      <section>
-        <div className="statistiche">
-          <StatCard numero={statistiche.totale} etichetta="Libri totali" />
-          <StatCard numero={statistiche.letti} etichetta="Letti" />
-          <StatCard numero={statistiche.inLettura} etichetta="In lettura" />
-          <StatCard numero={statistiche.daLeggere} etichetta="Da leggere" />
-        </div>
-      </section>
+      <SezioneBookCardsStatistics/>
 
       {/* Filtri — stessa logica dei btn-filtro in libreria-main.js */}
       <div className="filtri">

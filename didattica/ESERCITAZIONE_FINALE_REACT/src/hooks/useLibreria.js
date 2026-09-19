@@ -13,13 +13,18 @@
    - l' hook restituisce dati e funzioni pronti
      all'uso nei componenti, senza variabili globali
    ============================================ */
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
+// Chiave con cui i dati vengono salvati nel localStorage del browser.
+// Tenerla in una costante evita errori di battitura in più punti.
 const CHIAVE_STORAGE = 'bookshelf3';
-
+// "Enum" degli stati di lettura possibili. Usare STATI.LETTO invece della
+// stringa 'letto' evita refusi e rende facile cambiare i valori in futuro.
+// È esportato: i componenti lo importano per costruire select e filtri.
 export const STATI = {
   DA_LEGGERE: 'da-leggere',
   IN_LETTURA: 'in-lettura',
-  LETTO: 'letto'
+  LETTO: 'letto',
+  QUASI_FINITO: 'quasi-finito'
 };
 
 export function useLibreria() {
@@ -56,7 +61,7 @@ export function useLibreria() {
   }
 
   function cambiaStato(id, nuovoStato) {
-    setLibreria(prev => prev.map(libro => (libro.id === id ? {...libro, stato: nuovoStato} : libro)));
+    setLibreria(prev => prev.map(libro => (libro.id === id ? { ...libro, stato: nuovoStato } : libro)));
   }
 
   function isInLibreria(id) {
@@ -67,9 +72,10 @@ export function useLibreria() {
     totale: libreria.length,
     letti: libreria.filter(libro => libro.stato === STATI.LETTO).length,
     inLettura: libreria.filter(libro => libro.stato === STATI.IN_LETTURA).length,
-    daLeggere: libreria.filter(libro => libro.stato === STATI.DA_LEGGERE).length
+    daLeggere: libreria.filter(libro => libro.stato === STATI.DA_LEGGERE).length,
+    quasiFinito: libreria.filter(libro => libro.stato === STATI.QUASI_FINITO).length
   };
-
+  // L'API pubblica dell'hook: ciò che i componenti possono usare
   return {
     libreria,
     statistiche,

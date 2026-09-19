@@ -13,7 +13,7 @@ function Contacts(){
                     referrerpolicy="strict-origin-when-cross-origin">
                 </iframe>
             </div>
-            <div className="column50, contacts">
+            <div className="column50 col-contacts">
                 <h2>Dove siamo</h2>
                 <p>Via Esempio 1, Roma, 00100</p>
                 <p>

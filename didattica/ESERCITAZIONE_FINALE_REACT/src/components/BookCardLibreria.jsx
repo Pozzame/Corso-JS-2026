@@ -15,7 +15,9 @@ import {STATI} from '../hooks/useLibreria';
 const ETICHETTE_STATO = {
   [STATI.DA_LEGGERE]: {testo: 'Da leggere', classe: 'stato-da-leggere'},
   [STATI.IN_LETTURA]: {testo: 'In lettura', classe: 'stato-in-lettura'},
-  [STATI.LETTO]: {testo: 'Letto', classe: 'stato-letto'}
+  [STATI.LETTO]: {testo: 'Letto', classe: 'stato-letto'},
+  [STATI.QUASI_FINITO]: {testo: 'Quasi Finito', classe: 'quasi-finito'},
+
 };
 
 export default function BookCardLibreria({libro, onRimuovi, onCambiaStato}) {
@@ -42,6 +44,7 @@ export default function BookCardLibreria({libro, onRimuovi, onCambiaStato}) {
         <option value={STATI.DA_LEGGERE}>Da leggere</option>
         <option value={STATI.IN_LETTURA}>In lettura</option>
         <option value={STATI.LETTO}>Letto</option>
+        <option value={STATI.QUASI_FINITO}>Quasi Finito</option>
       </select>
 
       <button className="btn btn-secondario btn-piccolo" onClick={handleRimuovi}>

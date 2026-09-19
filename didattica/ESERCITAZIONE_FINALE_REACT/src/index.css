@@ -189,7 +189,17 @@ nav .disabilitato {
   max-width: 500px;
   margin: 0 auto;
 }
-
+.contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.column50 {
+    padding: 20px;
+}
 /* --- Bottoni --- */
 .btn {
   padding: 0.75rem 1.5rem;
